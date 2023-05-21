@@ -4,7 +4,7 @@ var btn1 = $("#btn1")[0];
 var btn2 = $("#btn2")[0];
 var slider = $("slider")[0];
  
-function openUX() {
+btn1.onclick = function openUX() {
     $('#content1').css('transform', 'translateX(0)');
     $('#content2').css('transform', 'translateX(200%)');
     $('#btn1').css('color', "#F5EEE6")
@@ -12,7 +12,7 @@ function openUX() {
     $("#slider").css('transform', 'translateX(0)')
   }
 
-function openGRD() {
+btn2.onclick = function openGRD() {
     $('#content1').css('transform', 'translateX(200%)');
     $('#content2').css('transform', 'translateX(0)');
     $('#btn2').css('color', "#F5EEE6")
