@@ -28,7 +28,7 @@ div.logo{
 }
 
 nav ul{
-    float: right
+    float: right;
 }
 
 nav li{
@@ -99,6 +99,18 @@ li{
     position: relative;
 }
 
+.tabs{
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+} 
+
 .myWork h1{
     font-family: Montserrat;
     font-style: normal;
@@ -111,53 +123,84 @@ li{
     text-align: center;
 }
 
-.workBtn{
-    width: 100%;
-    height: 60px;
+.btn-box{
     display: flex;
-    position: relative;
     justify-content: center;
+    align-items: center;
+    
 }
 
-label {
-    width: 200px;
-    height: 60px;
-    background-color:#F5EEE6;
-    border-radius: 30px;
+.switchContainer{
     position: absolute;
     outline: 3px solid #DE93C0;
-    cursor: pointer;
-  }
-
-  .toggle {
-    position: absolute;
-    width: 50%;
     height: 60px;
-    background-color: #DE93C0;
+    width: 220px;
     border-radius: 30px;
-    left: -1px;
-  }
-
-  .names {
-    font-family: Lexend;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    padding: 3px 20px 0px;
-  }
-
-.uxWork{
-    color: #F5EEE6;
-    align-content: center;
+    z-index: 1;
 }
 
-.funWork{
-    color:#DE93C0
+.switch{
+    position: relative;
+    background-color: #DE93C0;
+    width: 120px;
+    height: 60px;
+    border-radius: 30px;
+    left: -1px;
+    transition: transform 0.5s ease;
+}
+
+.btn-box button{
+    background: transparent;
+    border: none;
+    outline: 0px;
+    cursor: pointer;
+    font-size: 16px;
+    font-family: Lexend;
+    font-weight: 700;
+    padding: 0;
+    z-index: 2;
+}
+
+.uxWork{
+    width: 50%;
+    margin-right: 30px;
+
+}
+
+.grdWork{
+    width: 50%;
+    
+}
+
+#btn1{
+    color: #F5EEE6;
+}
+
+#btn2{
+    color:#5053A4;
+}
+
+.work{
+    height: 1000px;
+    width: 100%;
+}
+
+.work .projectContent{
+    position: absolute;
+    transform: translateX(200%);
+    width: 100%;
+    transition: 0.6ms;
+}
+
+#content1{
+    transform: translateX(0px);
+}
+
+.work .grdContent{
+    position: absolute;
+    transform: translateX(200%);
+    width: 100%;
+    transition: 0.6ms;
 }
 
 .workGrid{
@@ -206,6 +249,46 @@ label {
 }
 
 .caseStudy4 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grd1{
+    grid-area: 1 / 2 / span 1 / span 3;
+}
+
+.grd1 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grd2{
+    grid-area: 1 / 5 / span 1 / span 7;
+}
+
+.grd2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grd3{
+    grid-area: 2 / 2 / span 1 / span 7;
+}
+
+.grd3 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.grd4{
+    grid-area: 2 / 9 /span 1 / span 3;
+}
+
+.grd4 img{
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -395,6 +478,10 @@ footer p{
         justify-content: center;
         }
 
+    .work{
+        height: 1500px;
+    }
+
     .myWork h1{
         font-size: 36px;
     }
@@ -411,6 +498,17 @@ footer p{
 
     .caseStudy4{ grid-area: four;}
 
+    .grd1{ grid-area: one;}
+
+    .grd2{ grid-area: two;}
+
+    .grd3{ grid-area: three;}
+
+    .grd4{ grid-area: four;}
+
+    .work .grdContent{
+        height: 2000px;
+    }
     .workGrid{
         display: grid;
         row-gap: 20px;
@@ -488,5 +586,5 @@ footer p{
         padding: 0;
         text-align: center;
     }
-    
 }
+

@@ -3,6 +3,7 @@
     <head>
         <link rel="stylesheet" href="css/style.css">
     </head>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
     <body> 
         <header class="navigation">
             <div class="inline-block logo">
@@ -36,37 +37,56 @@
             <h1>
                 CHECK OUT MY WORK
             </h1>
-            <div class="workBtn">
-                 <label for="switch">
-                    <div class="toggle"></div>
-                    <div class="names">
-                      <p class="uxWork">
+            <section class="tabs">
+                <div class="btn-box">
+                    <button id="btn1" onclick="openUX()" class="uxWork">
                         UX/UI
-                      </p>
-                      <p class="funWork">
-                        Fun Stuff
-                      </p>
+                    </button>
+                    <button id="btn2" onclick="openGRD()" class="grdWork">
+                        FUN STUFF
+                    </button>
+                     <div class="switchContainer">
+                        <div id="slider" class="switch"></div>
+                     </div>
+                </div>
+               
+               
+                <!-- My Work Section Constructed using CSS Grid -->
+                <div class="work">
+                    <div id="content1" class="projectContent">
+                        <div class="workGrid">
+                            <div class="caseStudy1">
+                                <img src="images/department of education.jpg">
+                            </div>
+                            <div class="caseStudy2">
+                                <img src="images/phone blank.jpg">
+                            </div>
+                            <div class="caseStudy3">
+                                <img src="images/desktop blank.jpg">
+                            </div>
+                            <div class="caseStudy4">
+                                <img src="images/blank.jpg">
+                            </div>
+                        </div>
                     </div>
-                 </label>
-            </div>
-
-            <!-- My Work Section Constructed using CSS Grid -->
-            <div class="projectContent">
-                <div class="workGrid">
-                    <div class="caseStudy1">
-                        <img src="images/department of education.jpg">
-                    </div>
-                    <div class="caseStudy2">
-                        <img src="images/phone blank.jpg">
-                    </div>
-                    <div class="caseStudy3">
-                        <img src="images/desktop blank.jpg">
-                    </div>
-                    <div class="caseStudy4">
-                        <img src="images/blank.jpg">
+                    <div id="content2" class="grdContent">
+                        <div class="workGrid">
+                            <div class="grd1">
+                                <img src="images/propaganda.svg">
+                            </div>
+                            <div class="grd2">
+                                <img src="images/potassium.svg">
+                            </div>
+                            <div class="grd3">
+                                <img src="images/emptySpace.svg">
+                            </div>
+                            <div class="grd4">
+                                <img src="images/emptySpace.svg">
+                            </div>
+                        </div>
                     </div>
                 </div>
-             </div>
+            </section>
         </section>
          <!--  My UX Skills section coded using CSS flex -->
         <section class="mySkills">
@@ -136,4 +156,5 @@
             </p>
         </footer> 
     </body> 
+    <script src="js/index.js"></script>
 </html>
