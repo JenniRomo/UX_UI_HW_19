@@ -181,9 +181,8 @@ li{
 }
 
 .work{
-    height: auto;
+    height: 1000px;
     width: 100%;
-    margin:0 7%;
 }
 
 .work .projectContent{
@@ -201,6 +200,7 @@ li{
     position: absolute;
     transform: translateX(200%);
     width: 100%;
+    transition: 0.6ms;
 }
 
 .workGrid{
@@ -212,7 +212,6 @@ li{
     grid-gap: 20px;
     padding: 60px 7% 0px;
     box-sizing: border-box;
-    justify-items: center;
 }
 
 .caseStudy1{
@@ -480,8 +479,7 @@ footer p{
         }
 
     .work{
-        height: auto;
-        width: 100%;
+        height: 1500px;
     }
 
     .myWork h1{
@@ -509,9 +507,8 @@ footer p{
     .grd4{ grid-area: four;}
 
     .work .grdContent{
-        height: fit-content;
+        height: 2000px;
     }
-
     .workGrid{
         display: grid;
         row-gap: 20px;
