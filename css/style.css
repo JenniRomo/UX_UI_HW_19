@@ -11,7 +11,7 @@ background: #F5EEE6;
     justify-content: space-between;
     width: 100%;
     height: 120px;
-    background-color: #F5EEE6;
+    background-color: #DE93C0;
     padding: 0% 5%;
     box-sizing: border-box;
 }
@@ -40,7 +40,7 @@ nav li{
     font-style: normal;
     font-weight: 700;
     font-size: 24px;
-    color: #362F2E;
+    color: #F5EEE6;
     overflow: hidden;
 }
 
@@ -64,13 +64,12 @@ li{
 .content{
     display: flex;
     flex-direction: row-reverse;
-    gap: 5%;
+    gap: 7%;
     justify-content: center;
     align-items: center;
     height: 700px;
     width: 100%;
-    top: 120px;
-    padding: 0% 7%;
+    padding: 0% 5%;
     box-sizing: border-box;
     background-color: #DE93C0;
     overflow: hidden;
@@ -88,23 +87,33 @@ li{
     font-weight: 800;
     margin: 0;
     padding-bottom: 30px;
-    color: #F5EEE6;
+    color: #5053A4;
 }
 
 .intro p{
     font-family: 'Lexend', sans-serif;
     font-style: normal;
-    font-size: 35px;
+    font-size: 32px;
     font-weight: 300;
     text-align: justify;
     margin: 0;
-    color: #5053A4;
+    color: #F5EEE6;
 }
 
 .selfie img{
     width: 450px;
     border-radius: 250px 250px 25px 25px;
     position: relative;
+}
+
+.headerWave{
+    width: 100%;
+    position: relative;
+}
+
+.headerWave img{
+    object-fit: cover;
+    width: 100%;
 }
 
 .tabs{
@@ -122,10 +131,10 @@ li{
 .myWork h1{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-size: 48px;
+    font-size: 52px;
     font-weight: 800;
     margin: 0;
-    padding-top: 120px;
+    padding-top: 30px;
     padding-bottom: 30px;
     color: #5053A4;
     text-align: center;
@@ -302,17 +311,13 @@ li{
     object-fit: cover;
 }
 
-.mySkills{
-    margin-bottom: 120px;
-}
-
 .mySkills h1{
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-size: 48px;
     font-weight: 800;
     margin: 0;
-    padding: 120px 0px 30px;
+    padding: 120px 0px 0px;
     color: #F36D36;
     text-align: center;
 }
@@ -328,21 +333,16 @@ li{
 }
 
 .itMe .selfie{
-    width: 375px;
-    height: 450px;
-    border-radius: 225px;
+    width: auto;
+    height: 500px;
     object-fit: cover;
     position: relative;
-}
-.itMe .learnMore{
-    position: absolute;
-    top: -15px;
-    left: -30px;
+    transform: scaleX(-1);
 }
 
 .description{
     width: 650px;
-    margin-left: 7%;
+    margin-left: 5%;
     font-family: 'Lexend', sans-serif;
     font-weight: 300;
     font-size: 20px;
@@ -351,14 +351,25 @@ li{
     line-height: 30px;
 }
 
-.description p{ 
-    margin-bottom: 5%;
+
+.bottomWave{
+    width: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    bottom: -6px;
+}
+
+.bottomWave img{
+    object-fit: cover;
+    width: 100%;
 }
 
 .contactMe{
     background-color: #5053A4;
     width: 100%;
-    padding: 120px 7%;
+    padding: 30px 7%;
+    padding-bottom: 60px;
     display: flex;
     box-sizing: border-box;
     justify-content: center;
@@ -367,6 +378,10 @@ li{
 
 .hitMeup{
     width: 690px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .hitMeup p{
@@ -405,48 +420,46 @@ li{
    align-items: left;
    flex-direction: column;
    justify-content: center;
-   width: 100%;
+   width: 270px;
 }
 
 .contactInfo p{
     margin: 0px;
 }
 
-.contactPic img{
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-}
-
 footer{
-    display: flex;
-    flex-direction: row;
+    display: inline-flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
     width: 100%;
-    height: 120px;
-    background-color: #F5EEE6;
-    padding: 0% 5%;
+    background-color: #5053A4;
+    padding: 0% 7%;
     bottom: 0px;
     box-sizing: border-box;
+    gap: 90px;
+}
+
+footer ul{
+    justify-content: center;
+    float: none;
+    gap: 10%;
 }
 
 footer li{
-    padding-right: 120px;
     font-family: 'Lexend', sans-serif;
     font-style: normal;
-    font-weight: 300;
-    font-size: 20px;
-    color: #5053A4;
+    font-weight: 700;
+    font-size: 24px;
+    color: #F5EEE6;
 }
 
 footer p{
-    float: right;
     font-family: 'Lexend', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-size: 16px;
-    color: #5053A4;
+    color: #F5EEE6;
+    margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 1000px) {
@@ -598,13 +611,14 @@ footer p{
         align-items: center;
         width: 100%;
         height: auto;
-        padding: 60px 0px;
+        padding: 30px 0px;
     }
     footer ul{
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 60px;
         padding-bottom: 60px;
+        height: auto;
     }
     footer li{
         padding: 0;
