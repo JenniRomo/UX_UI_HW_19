@@ -13,26 +13,29 @@ background: #F5EEE6;
     height: 120px;
     background-color: #F5EEE6;
     padding: 0% 5%;
-    top: 0px;
     box-sizing: border-box;
 }
 
 .inline-block{
-    display: inline-block;
+    display: flex;
     vertical-align: top;
     box-sizing: border-box;
+    width: 50%;
+    justify-content: right;
 }
 
-div.logo{
+.hamburger{
+    display: none;
+}
+
+.logo{
     height: 75px;
+    width: auto;
+    padding-right: 5%;
 }
 
-nav ul{
-    float: right;
-}
 
 nav li{
-    padding-left: 120px;
     font-family: 'Lexend', sans-serif;
     font-style: normal;
     font-weight: 700;
@@ -42,10 +45,14 @@ nav li{
 }
 
 ul{
-    display: inline-block;
+    display: inline-flex;
     vertical-align: top;
     overflow: hidden;
     padding: 0;
+    width: 100%;
+    height: 30px;
+    justify-content: space-between;
+    float: right;
  }
 
 li{
@@ -442,9 +449,15 @@ footer p{
     color: #5053A4;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1000px) {
     .inline-block ul{
         display: none;
+    }
+
+    .hamburger{
+        display: block;
+        height: 60px;
+        width: auto;
     }
     
     .content{
@@ -452,20 +465,16 @@ footer p{
         width: 100%;
         justify-content: center;
         align-items: center;
+        padding-bottom: 5%;
     }
   
-    .selfie{
-        width: 450px;
-        height: auto;
-    }
-
     .selfie img{
-        width: 450px;
+        width: 400px;
         height: auto;
     }
 
     .intro{
-        width: 100%;
+        width: 80%;
         align-items: center;
     }
 
@@ -477,6 +486,7 @@ footer p{
     .intro p{
         font-size: 20px;
         justify-content: center;
+        text-align: center;
         }
 
     .work{
@@ -486,43 +496,56 @@ footer p{
     .myWork h1{
         font-size: 36px;
     }
+
     .mySkills{
         flex-direction: column;
         width: 100%;
     }
 
-    .caseStudy1{ grid-area: one;}
-
-    .caseStudy2{ grid-area: two;}
-
-    .caseStudy3{ grid-area: three;}
-
-    .caseStudy4{ grid-area: four;}
-
-    .grd1{ grid-area: one;}
-
-    .grd2{ grid-area: two;}
-
-    .grd3{ grid-area: three;}
-
-    .grd4{ grid-area: four;}
-
-    .work .grdContent{
-        height: 2000px;
-    }
     .workGrid{
         display: grid;
         row-gap: 20px;
-        grid:
-        'one one one one'
-        'two two two two'
-        'three three three three'
-        'four four four four';
+        grid-template-columns: repeat(4, 90px);
+        grid-template-rows: repeat(4, fit-content);
         width: 100%;
         padding: 60px 7% 0px;
         box-sizing: border-box;
     }
 
+    .caseStudy1{
+        grid-area: 1 / 1 / span 1 / span 4;
+    }
+    
+    
+    .caseStudy2{
+        grid-area: 2 / 1 / span 1 / span 4;
+    }
+    
+    .caseStudy3{
+        grid-area: 3 / 1 / span 1 / span 4;
+    }
+    
+    .caseStudy4{
+        grid-area: 4 / 1 / span 1 / span 4;
+    }
+    
+    .grd1{
+        grid-area: 1 / 1 / span 1 / span 4;
+    }
+    
+    
+    .grd2{
+        grid-area: 2 / 1 / span 1 / span 4;
+    }
+    
+    .grd3{
+        grid-area: 3 / 1 / span 1 / span 4;
+    }
+    
+    .grd4{
+        grid-area: 4 / 1 / span 1 / span 4;
+    }
+    
     .mySkills h1{
         font-size: 36px;
     }
